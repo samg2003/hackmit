@@ -6,6 +6,5 @@ pandas
 numpy
 matplotlib
 statsmodels
-random
 requests
 os
