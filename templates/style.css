@@ -1,0 +1,34 @@
+div{
+    border: 1px solid black;
+}
+
+@media screen and (max-width: 768px){
+    body{
+        padding: 20px;
+    }
+}
+
+h2{
+    text-align: center;
+}
+
+/* .flex-container{
+    display: flex;
+} */
+
+#graph,  #input{
+    /* width: auto;  */
+    text-align: center;
+}
+/*
+#graph-image{
+    display: block;
+} */
+
+div{
+    padding: 5px;
+}
+
+h2{
+    padding: 10px 0px 10px  0px;
+}
