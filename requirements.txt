@@ -2,10 +2,10 @@ Flask
 Flask-Session
 python-dateutil
 gunicorn
-opencv-python-headless==4.2.0.32
-uuid
-datetime
 pandas
 numpy
-seaborn
 matplotlib
+statsmodels
+random
+requests
+os
