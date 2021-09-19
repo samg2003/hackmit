@@ -46,13 +46,8 @@ def elevation(lat, long):
 def empty_directory(folder):
     for filename in os.listdir(folder):
         file_path = os.path.join(folder, filename)
-        try:
-            if os.path.isfile(file_path) or os.path.islink(file_path):
-                os.unlink(file_path)
-            elif os.path.isdir(file_path):
-                os.remove(file_path)
-        except Exception as e:
-            print('Failed to delete %s. Reason: %s' % (file_path, e))
+        if filename[0] == "0":
+            os.remove(file_path)
 def coordinates(lat, long):
     r = requests.get('https://api.open-elevation.com/api/v1/lookup?locations=' + str(lat) + "," + str(long))
     elevation = r.json()["results"][0]["elevation"]
@@ -62,7 +57,7 @@ def coordinates(lat, long):
     data = df[['year','gmsl_variation_with_gia_smooth_and_signals_removed']]
     predicted = data.append(pd.DataFrame(yhat, columns=data.columns), ignore_index=True)
     if elevation > 10:
-        return "There is plenty of elevation at this place."
+        return "There is plenty of elevation at this place.", "images/base.png"
     while yhat[0][1] < elevation * 100:
         model = VAR(predicted[['year','gmsl_variation_with_gia_smooth_and_signals_removed']])
         model_fit = model.fit()
