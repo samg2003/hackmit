@@ -17,23 +17,21 @@
 
 </head>
 
-<body>
+<body style="background:url('images/background.jpg') repeat;">
     <!-- Jumbotron -->
-    <div class=" jumbotron p-5 text-center bg-dark text-light">
+    <div style="background:url('images/banner.jpg') repeat;" class=" jumbotron p-5 text-center bg-dark text-light">
         <!-- <img src="banner-photo.jpeg" alt=""> -->
-        <h1 class="mb-3">Title TBD</h1>
-        <h4 class="mb-3">Subheading TBD</h4>
+        <h1 class="mb-3">Sea Elevation Forecast</h1>
+        <h4 class="mb-3">The fate of our coastlines</h4>
     </div>
     <!-- Jumbotron -->
 
     <div id="main-body" class="container">
-        <p>Instructions: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa soluta voluptatum vero
-            inventore! Adipisci et sapiente consequatur corrupti animi ipsam recusandae, omnis cum quae maiores
-            explicabo repudiandae sit ut magnam.</p>
+        <p>Instructions: To use this tool, find the coordinates of your favourite coastal location and enter them into the text box below. Press the “predict” button to see the predicted number of years before that location is engulfed by the water</p>
         <div id="input">
             <form action="/" method="POST">
                 <label for="coordinates">Enter your coordinates: </label>
-                <input type="text" id="coordinates" name = "coordinates">
+                <input type="text" id="coordinates" name = "coordinates" placeholder="latitude, longitude">
                 <button id="submit-button" type="submit" name = "send" value = "submit" class="btn btn-secondary text-light" >Predict </button>
             </form>
         </div>
@@ -46,16 +44,14 @@
                 </div>
                 <div id="info" class="col-md">
                     <div id="years-left" class="text-danger">
-                        <h3> <span id=years-left-span">XX</span> years</h3>
-                        <h4>{{message}}until your location is underwater</h4>
+                        <h3> <span id="years-left-span">{{message}}</span> years</h3>
+                        <h4>until your location is underwater</h4>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mollis aliquam sem. Morbi fringilla
-                        sagittis felis, vitae bibendum nulla vehicula at. Maecenas sed venenatis nulla, in suscipit
-                        odio. Donec odio magna, viverra ultrices mattis in, semper vitae tellus. Aliquam lacinia et nisi
-                        nec eleifend. Morbi consectetur, sapien sit amet dapibus iaculis, eros eros vestibulum enim,
-                        vitae placerat diam sapien at nibh. Nulla felis diam, egestas non elit id, eleifend vehicula
-                        nunc. Pellentesque vehicula ipsum mauris, nec dapibus odio dapibus et. Phasellus lacinia at ante
-                        quis ullamcorper. Nunc sapien tellus, suscipit vitae diam ut, posuere laoreet augue.
+                    <p>One of the many consequences of climate change and global warming is the melting of our ice caps.
+                       As all of that ice melts, the newly-freed liquid water enters our ocean and changes our sea levels.
+                        Now rising sea levels threatens many coastal environments.
+                         Unless we make drastic and immediate changes to the current rate of climate change, all of our most precious sea-side cities,
+                         towns, and ecosystems will be lost to the ocean.
                     </p>
                     <!-- bruh 2 -->
                 </div>
@@ -66,32 +62,35 @@
 
         <div id="about">
             <h2>About The Project</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mollis aliquam sem. Morbi fringilla sagittis
-                felis, vitae bibendum nulla vehicula at. Maecenas sed venenatis nulla, in suscipit odio. Donec odio
-                magna, viverra ultrices mattis in, semper vitae tellus. Aliquam lacinia et nisi nec eleifend. Morbi
-                consectetur, sapien sit amet dapibus iaculis, eros eros vestibulum enim, vitae placerat diam sapien at
-                nibh. Nulla felis diam, egestas non elit id, eleifend vehicula nunc. Pellentesque vehicula ipsum mauris,
-                nec dapibus odio dapibus et. Phasellus lacinia at ante quis ullamcorper. Nunc sapien tellus, suscipit
-                vitae diam ut, posuere laoreet augue.
+            <p>This website was created as a submission for HackMIT 2021. The goal is to use data analysis to show the
+              impact of climate change to public individuals and hopefully convince more people to take action.
+              It was created using <a href="https://podaac.jpl.nasa.gov/dataset/MERGED_TP_J1_OSTM_OST_GMSL_ASCII_V5">GMSL dataset</a>,
+              <a href="https://open-elevation.com/">Open Elevation API</a>, and <a href="http://statsmodels.org/stable/index.html">statsmodels library</a>.
             </p>
+            <p>We have used Open Elevation API for checking the elevation of the coordinates that the user provided.
+               Subsequently, we used GMSL dataset and ran vector autoregression to predict when the global mean sea level would
+                rise over the given coordinate elevation. </p>
             <div class="row">
                 <div class="col avatar-card">
-                    <img src="images/avatar-placeholder.png" class="avatar-image">
+                    <img src="images/sam.jpg" class="img-thumbnail">
                     <h4>Sambhav Gupta</h4>
-                    <p>links and stuff</p>
+                    <p><a href = 'http://www.sambhavgupta.com'>Personal Website</a></p>
+                    <p><a href = 'https://www.linkedin.com/in/samg2003/'>LinkedIn</a></p>
                 </div>
                 <div class="col avatar-card">
-                    <img src="images/liza-avatar.png" class="avatar-image">
+                    <img src="images/liza-avatar.png" class="img-thumbnail">
                     <h4>Liza George</h4>
-                    <p>links and stuff</p>
+                    <p><a href = 'https://github.com/lizageorge'>GitHub</a></p>
+                    <p><a href = 'https://www.linkedin.com/in/george-liza/'>LinkedIn</a></p>
                 </div>
                 <div class="col avatar-card">
-                    <img src="images/avatar-placeholder.png" class="avatar-image">
+                    <img src="images/avatar-placeholder.png" class="img-thumbnail">
                     <h4>Francesco Crivelli</h4>
-                    <p>links and stuff</p>
+                    <p><a href = 'https://francescocrivelli.com/'>Personal Website</a></p>
+                    <p><a href = 'https://github.com/Francescocrivelli'>GitHub</a></p>
                 </div>
                 <div class="col avatar-card">
-                    <img src="images/avatar-placeholder.png" class="avatar-image">
+                    <img src="images/avatar-placeholder.png" class="img-thumbnail">
                     <h4>Michael Equi</h4>
                     <p>links and stuff</p>
                 </div>

@@ -28,4 +28,4 @@ def index():
         coordinate = [float(coordinate[0].strip()), float(coordinate[1].strip())]
         year, name = coordinates(coordinate[0], coordinate[1])
         return render_template("index.html", message = year, path = name)
-    return render_template("index.html")
+    return render_template("index.html", message = "XX")
