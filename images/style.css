@@ -45,8 +45,7 @@ div{
 }
 
 .avatar-image{
-  height: 8em;
-  border-radius: 50%;
+    width: 50px;
 }
 .avatar-card{
     text-align: center;
