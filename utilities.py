@@ -51,7 +51,7 @@ def coordinates(lat, long):
     data = df[['year','gmsl_variation_with_gia_smooth_and_signals_removed']]
     predicted = data.append(pd.DataFrame(yhat, columns=data.columns), ignore_index=True)
     if elevation > 10:
-        return "More than 100 years", "images/base.png"
+        return "More than 100", "images/base.png"
     while yhat[0][1] < elevation * 100:
         model = VAR(predicted[['year','gmsl_variation_with_gia_smooth_and_signals_removed']])
         model_fit = model.fit()
