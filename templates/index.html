@@ -31,24 +31,24 @@
             inventore! Adipisci et sapiente consequatur corrupti animi ipsam recusandae, omnis cum quae maiores
             explicabo repudiandae sit ut magnam.</p>
         <div id="input">
-            <form>
+            <form action="/" method="POST">
                 <label for="coordinates">Enter your coordinates: </label>
-                <input type="text" id="coordinates">
-                <button id="submit-button" type="button" class="btn btn-secondary text-light" >Predict </button>
+                <input type="text" id="coordinates" name = "coordinates">
+                <button id="submit-button" type="submit" name = "send" value = "submit" class="btn btn-secondary text-light" >Predict </button>
             </form>
         </div>
 
         <div id="flex-containter" class="container">
             <div class="row">
                 <div id="graph" class="col-md">
-                    <img id="graph-image" src="https://via.placeholder.com/300x400.png?text=Sea+Level+Graph+Goes+Here">
+                    <img id="graph-image" src="{{path}}">
                     <!-- bruh -->
                 </div>
 
                 <div id="info" class="col-md">
                     <div id="years-left" class="text-danger">
                         <h3> <span id=years-left-span">XX</span> years</h3>
-                        <h4>until your location is underwater</h4>
+                        <h4>{{message}}until your location is underwater</h4>
                     </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mollis aliquam sem. Morbi fringilla
                         sagittis felis, vitae bibendum nulla vehicula at. Maecenas sed venenatis nulla, in suscipit
