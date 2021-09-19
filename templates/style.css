@@ -1,6 +1,13 @@
 div{
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
+/* 
+:root{
+    --dark: 2D3047;
+    --warning: DA2C38;
+    --highlight: 70A288;
+    --background: 70A288
+} */
 
 @media screen and (max-width: 768px){
     body{
@@ -8,27 +15,31 @@ div{
     }
 }
 
+
+@media only screen and (min-width: 629px) {
+    .jumbotron{
+        background: linear-gradient(0deg, rgba(1, 0, 32, 0.3), rgba(1, 0, 34, 0.3)), url(banner-photo.jpeg);
+        background-size: 100vw;
+    }
+}
+
 h2{
     text-align: center;
-}
+    padding: 10px 0px 10px  0px;
 
-/* .flex-container{
-    display: flex;
-} */
-
-#graph,  #input{
-    /* width: auto;  */
-    text-align: center;
 }
-/*
-#graph-image{
-    display: block;
-} */
 
 div{
-    padding: 5px;
+    padding: 10px 5px;
 }
 
-h2{
-    padding: 10px 0px 10px  0px;
+#graph,  #input, #years-left{
+    text-align: center;
+}
+#graph{
+    padding: 0px;
+}
+
+#years-left{
+    /* display: none; <----change based on whether or not input is delivered*/ 
 }
