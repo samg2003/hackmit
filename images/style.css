@@ -13,7 +13,6 @@
     .jumbotron{
         background: linear-gradient(0deg, rgba(1, 0, 32, 0.3), rgba(0, 0, 0, 0.3)), url(images/banner-photo.jpg);
         background-size: 100vw;
-
     }
 }
 
