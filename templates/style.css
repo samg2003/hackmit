@@ -18,7 +18,7 @@ div{
 
 @media only screen and (min-width: 629px) {
     .jumbotron{
-        background: linear-gradient(0deg, rgba(1, 0, 73, 0.3), rgba(1, 0, 73, 0.3)), url(banner-photo.jpeg);
+        background: linear-gradient(0deg, rgba(1, 0, 32, 0.3), rgba(1, 0, 34, 0.3)), url(banner-photo.jpeg);
         background-size: 100vw;
     }
 }
